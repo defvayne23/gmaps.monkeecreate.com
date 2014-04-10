@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <title>{{ page.title }}</title>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-    </head>
-    <body>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.15&sensor=false"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" charset="utf-8"></script>
+  <script src="/js/gMaps/jquery.gMaps.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/">Docs</a>
+        <a href="/">Examples</a>
+        <a href="/">FAQ</a>
+      </nav>
+      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+    </div>
+  </div>
+  <div class="content">
+    {% if page.showMap == true %}
+      <script>
+      $(function() {
+        // var map = new google.maps.Map(
+        //   document.getElementById('full_map'),
+        //   {
+        //     zoom: 3,
+        //     center: new google.maps.LatLng(0, -180),
+        //     mapTypeId: 'satelite'
+        //   }
+        // );
+        $('#full_map').gMap({
+          map: 'static',
+          center: "Austin, TX",
+          zoom: 10,
+          streetview: false,
+          markers: [
+            {
+              position: [30.320730,-97.733688]
+            }
+          ],
+          style: {
+            width: 600
+          },
+          error: function(element, error) {
+            console.log(error);
+          }
+        });
+      });
+      </script>
+      <div id="full_map"></div>
+    {% endif %}
+    <div class="container">
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-    </body>
+      {{ content }}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="monkeecreate">
+        Handcrafted with ♥ from Austin, Texas.<br>
+        monkeeSee, monkeeDo, <a href="http://monkeecreate.com/">monkeeCreate</a>
+      </div>
+      <ul>
+        <li><h3>Developed by:</h3></li>
+        <li class="developer">
+          <img src="https://graph.facebook.com/defvayne23/picture?&width=100&height=100">
+          <span class="name">John Hoover</span>
+          <a href="http://github.com/defvayne23" class="fa fa-github"></a>
+          <a href="http://twitter.com/defvayne23" class="fa fa-twitter"></a>
+          <a href="http://defvayne23.com/" class="fa fa-rss-square"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
