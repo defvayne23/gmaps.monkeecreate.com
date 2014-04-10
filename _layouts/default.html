@@ -30,16 +30,7 @@
     {% if page.showMap == true %}
       <script>
       $(function() {
-        // var map = new google.maps.Map(
-        //   document.getElementById('full_map'),
-        //   {
-        //     zoom: 3,
-        //     center: new google.maps.LatLng(0, -180),
-        //     mapTypeId: 'satelite'
-        //   }
-        // );
         $('#full_map').gMap({
-          map: 'static',
           center: "Austin, TX",
           zoom: 10,
           streetview: false,
@@ -48,9 +39,6 @@
               position: [30.320730,-97.733688]
             }
           ],
-          style: {
-            width: 600
-          },
           error: function(element, error) {
             console.log(error);
           }
