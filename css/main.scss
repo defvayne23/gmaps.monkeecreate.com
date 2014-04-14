@@ -1,19 +1,25 @@
 $light-grey: #F2F2F2;
 $dark-grey: #DBDBDB;
+$body-color: #333333;
+$body-color-light: #616161;
 
 @import 'mixins';
 
 body {
   background-color: $light-grey;
   font: 14px Helvetica, Arial, sans-serif;
-  color: #333;
+  color: $body-color;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 a {
-  color: #333;
+  color: #8F0000;
   text-decoration: none;
   &:hover {
-    color: #4D4D4D;
+    color: $body-color-light;
     text-decoration: underline;
   }
 }
@@ -26,7 +32,10 @@ a {
 .header {
   @include block-grey-bottom;
   h1 {
-    margin-top: 0;
+    margin: 0;
+    a {
+      color: $body-color;
+    }
   }
   nav {
     float: right;
@@ -40,6 +49,9 @@ a {
 }
 
 .content {
+  h1 {
+    margin: 0 0 10px;
+  }
   background: #fff;
   #full_map {
     width: 100%;
@@ -55,6 +67,19 @@ a {
       text-align: center;
     }
   }
+}
+
+.pagination {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+.highlight {
+  background: $light-grey;
+  border: 2px solid $dark-grey;
+  margin: 20px 0;
+  padding: 10px;
+  height: 200px;
+  overflow: auto;
 }
 
 .footer {
@@ -89,6 +114,11 @@ a {
     margin-bottom: 10px;
   }
   .fa {
+    color: $body-color;
     font-size: 2em;
+    &:hover {
+      color: $body-color-light;
+      text-decoration: none;
+    }
   }
 }
