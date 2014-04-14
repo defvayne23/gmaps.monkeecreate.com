@@ -2,3 +2,4 @@ name: gMaps
 markdown: redcarpet
 pygments: true
 permalink: /examples/:categories/:title.html
+exclude: [node_modules]
