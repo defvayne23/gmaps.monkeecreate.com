@@ -362,6 +362,12 @@ body {
 h1 {
   font-size: 3em; }
 
+h2 {
+  font-size: 2.5em;
+  margin: 0 0 20px;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb; }
+
 a {
   color: #8F0000;
   text-decoration: none; }
@@ -399,12 +405,31 @@ a {
     height: 300px; }
   .content .container {
     padding: 20px 0; }
-  .content h2 {
-    margin: 0; }
-    .content h2.tagline {
-      font-size: 5em;
-      text-align: center; }
 
+/* Homepage */
+.about {
+  overflow: hidden; }
+  .about .block {
+    width: 30%;
+    float: left;
+    border-right: 1px solid #dbdbdb;
+    padding: 0 15px;
+    text-align: justify; }
+    .about .block:last-child {
+      border: none; }
+  .about .latest .release {
+    font-size: 1.8em;
+    margin-bottom: 20px; }
+    .about .latest .release .fa {
+      font-size: 1.8em; }
+  .about .latest ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2em; }
+
+/* Posts */
 .pagination {
   margin-bottom: 20px;
   font-size: 1.5em; }
@@ -414,8 +439,20 @@ a {
   border: 2px solid #dbdbdb;
   margin: 20px 0;
   padding: 10px;
-  height: 200px;
+  max-height: 200px;
   overflow: auto; }
+  .highlight pre {
+    margin: 0; }
+
+/* Table */
+table {
+  width: 100%;
+  border: 1px solid #dbdbdb; }
+  table th, table td {
+    border: 1px solid #dbdbdb;
+    padding: 8px; }
+  table tbody tr:nth-child(odd) {
+    background: #f2f2f2; }
 
 .footer {
   background: #f2f2f2;
