@@ -112,6 +112,10 @@ a {
   margin-bottom: 20px;
   font-size: 1.5em;
 }
+code {
+  background: $light-grey;
+  padding: 2px;
+}
 .highlight {
   background: $light-grey;
   border: 2px solid $dark-grey;
@@ -121,6 +125,9 @@ a {
   overflow: auto;
   pre {
     margin: 0;
+    code {
+      padding: 0;
+    }
   }
 }
 
@@ -137,12 +144,23 @@ table {
       &:nth-child(odd) {
         background: $light-grey;
       }
+      .type-both {
+        background: $light-grey;
+      }
+      .type-interactive {
+        background: #E6E4F2;
+      }
+      .type-static {
+        background: #E4F2E6;
+      }
     }
   }
 }
 
 .footer {
   @include block-grey-top;
+  overflow: hidden;
+  padding-bottom: 20px;
   .monkeecreate {
     float: right;
   }

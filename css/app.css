@@ -438,6 +438,10 @@ a {
   margin-bottom: 20px;
   font-size: 1.5em; }
 
+code {
+  background: #f2f2f2;
+  padding: 2px; }
+
 .highlight {
   background: #f2f2f2;
   border: 2px solid #dbdbdb;
@@ -447,6 +451,8 @@ a {
   overflow: auto; }
   .highlight pre {
     margin: 0; }
+    .highlight pre code {
+      padding: 0; }
 
 /* Table */
 table {
@@ -457,12 +463,20 @@ table {
     padding: 8px; }
   table tbody tr:nth-child(odd) {
     background: #f2f2f2; }
+  table tbody tr .type-both {
+    background: #f2f2f2; }
+  table tbody tr .type-interactive {
+    background: #E6E4F2; }
+  table tbody tr .type-static {
+    background: #E4F2E6; }
 
 .footer {
   background: #f2f2f2;
   border: 1px solid #dbdbdb;
   padding: 20px 0;
-  border-width: 1px 0 0 0; }
+  border-width: 1px 0 0 0;
+  overflow: hidden;
+  padding-bottom: 20px; }
   .footer .monkeecreate {
     float: right; }
   .footer h3 {
