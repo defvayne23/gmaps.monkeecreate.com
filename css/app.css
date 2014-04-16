@@ -422,12 +422,16 @@ a {
     margin-bottom: 20px; }
     .about .latest .release .fa {
       font-size: 1.8em; }
+    .about .latest .release a {
+      color: #333; }
   .about .latest ul {
     float: right;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 1.2em; }
+  .about .latest .project-links {
+    clear: both; }
 
 /* Posts */
 .pagination {

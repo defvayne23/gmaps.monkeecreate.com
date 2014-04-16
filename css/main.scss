@@ -89,6 +89,9 @@ a {
       .fa {
         font-size: 1.8em;
       }
+      a {
+        color: #333;
+      }
     }
     ul {
       float: right;
@@ -96,6 +99,10 @@ a {
       padding: 0;
       list-style: none;
       font-size: 1.2em;
+    }
+
+    .project-links {
+      clear: both;
     }
   }
 }
