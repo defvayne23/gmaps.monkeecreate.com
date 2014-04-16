@@ -1,0 +1,21 @@
+{
+  "name": "gMaps",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "gulp-jshint": "latest",
+    "gulp-rename": "latest",
+    "gulp-notify": "latest",
+    "gulp-util": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:defvayne23/gmaps.monkeecreate.com.git"
+  },
+  "author": "John Hoover",
+  "license": "MIT"
+}
