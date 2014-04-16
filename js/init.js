@@ -22,13 +22,8 @@ jQuery(function() {
 			var html = '';
       var list = $('<ul></ul>');
 
-      console.log(data);
-      console.log(repoTags);
-
 			if(tag)
-				html += '<div class="release"><i class="fa fa-rocket fa-lg"></i> <span>'+tag.name+'</span></div>';
-      else
-        html += '<div class="release"><i class="fa fa-rocket fa-lg"></i> <span class="release">v3.0.0</span></div>';
+				html += '<div class="release"><i class="fa fa-rocket fa-lg"></i> <a href="'+data.html_url+'/releases" target="_blank">'+tag.name+'</a></div>';
 
 			if(data.stargazers_count)
 				list.append('<li><i class="fa fa-star fa-fw"></i> Stars: <span class="stars">'+data.stargazers_count+'</span></li>');
@@ -38,7 +33,7 @@ jQuery(function() {
 
       list.append('<li><i class="fa fa-bug fa-fw"></i> Issues: <span class="issues">'+data.open_issues+'</span></li>');
 
-      html += '<a href="'+data.url+'" target="_blank">View on Github</a> | <a href="'+data.downloads_url+'" target="_blank">Download from Github</a>';
+      html += '<p class="project-links"><a href="'+data.html_url+'" target="_blank">View on Github</a> | <a href="'+data.html_url+'/releases" target="_blank">Download from Github</a></p>';
 
 			$(el).prepend(html).prepend(list);
 		});
