@@ -9,7 +9,7 @@ title: Basic Setup
 Something, something, darkside.
 
 {% highlight html lineos %}
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.15&sensor=false"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.15&libraries=geometry&sensor=false"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" charset="utf-8"></script>
 <script src="/js/gMaps/jquery.gMaps.js" charset="utf-8"></script>
 {% endhighlight %}

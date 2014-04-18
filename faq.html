@@ -14,4 +14,11 @@ title: FAQ
     <h2>Why is my static map not showing?</h2>
     Most likely it's because the URL for the map exceeded 2048 characters. This is a limitation with the HTTP protocol. Be sure to catch errors with the <code>error: function(){}</code> method. Also check the developer console for any javascript errors.
   </li>
+  <li>
+    <h2>Why is my polyline/polygone not showing on my static map?</h2>
+    Polylines and polygons use a special Google Maps library to encode the points to shorten the amount of characters added to the URL. Be sure to use the Google Maps script include below.
+{% highlight html %}
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.15&libraries=geometry&sensor=false"></script>
+{% endhighlight %}
+  </li>
 </ol>
