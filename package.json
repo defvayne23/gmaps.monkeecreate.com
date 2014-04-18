@@ -9,6 +9,8 @@
     "gulp-uglify": "latest",
     "gulp-jshint": "latest",
     "gulp-rename": "latest",
+    "jshint-stylish": "latest",
+    "gulp-size": "latest",
     "gulp-notify": "latest",
     "gulp-util": "latest"
   },
