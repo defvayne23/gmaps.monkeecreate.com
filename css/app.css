@@ -454,6 +454,14 @@ code {
     .highlight pre code {
       padding: 0; }
 
+/* FAQ */
+#faq {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  #faq li {
+    margin-bottom: 40px; }
+
 /* Table */
 table {
   width: 100%;
