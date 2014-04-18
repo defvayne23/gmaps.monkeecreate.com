@@ -10,4 +10,8 @@ title: FAQ
     <h2>Why is my interactive map not showing?</h2>
     First step is to make sure you either have both center and zoom set, or have bounds turned on. Next step is to try removing markers and other elemnts one at a time to find the culprit. Also make sure you are catching and showing any errors from gMaps.
   </li>
+  <li>
+    <h2>Why is my static map not showing?</h2>
+    Most likely it's because the URL for the map exceeded 2048 characters. This is a limitation with the HTTP protocol. Be sure to catch errors with the <code>error: function(){}</code> method. Also check the developer console for any javascript errors.
+  </li>
 </ol>
