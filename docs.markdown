@@ -59,13 +59,13 @@ Base elements to pass as a hash in `$.gMaps(options)`.
       <td>type</td> <td class="type-both">Both</td> <td>String</td> <td>roadmap</td> <td>Controls what map tiles to display.</td>
     </tr>
     <tr>
-      <td>scroll</td> <td class="type-interactive">Interactive</td> <td>Bool</td> <td>true</td> <td>Sets if the map should respond to the scrollwheel to zoom in/out.</td>
+      <td>scroll</td> <td class="type-interactive">Interactive</td> <td>Bool</td> <td>true</td> <td>Sets if the map should respond to the scroll wheel to zoom in/out.</td>
     </tr>
     <tr>
       <td>bounds</td> <td class="type-interactive">Interactive</td> <td>Bool</td> <td>false</td> <td>Instead of setting zoom and center, this makes sets them to make sure all elements are visible.</td>
     </tr>
     <tr>
-      <td>streetview</td> <td class="type-interactive">Interactive</td> <td>Bool</td> <td>true</td> <td>Controls ability to use streetview. If false, Pegman doesn't show in the UI.</td>
+      <td>streetview</td> <td class="type-interactive">Interactive</td> <td>Bool</td> <td>true</td> <td>Controls ability to use street view. If false, Pegman doesn't show in the UI.</td>
     </tr>
     <tr>
       <td>format</td> <td class="type-static">Static</td> <td>String</td> <td>png</td> <td>What format to return the static map. (png, png32, gif, jpg, jpg-baseline)</td>
@@ -159,7 +159,7 @@ Base elements to pass as a hash in `$.gMaps(options)`.
       <td>content</td> <td class="type-interactive">Interactive</td> <td>String</td> <td></td> <td>HTML to display in marker info window when clicked.</td>
     </tr>
     <tr>
-      <td>icon</td> <td class="type-both">Both</td> <td>String, <a href="#markerIcon">Marker Icon</a></td> <td></td> <td>Icon for marker. Either supply URL path for image (use URL shortner) or use icon settings. Static map only accepts a string or simple icon.</td>
+      <td>icon</td> <td class="type-both">Both</td> <td>String, <a href="#markerIcon">Marker Icon</a></td> <td></td> <td>Icon for marker. Either supply URL path for image (use URL shortener) or use icon settings. Static map only accepts a string or simple icon.</td>
     </tr>
     <tr>
       <td>shadow</td> <td class="type-interactive">Interactive</td> <td><a href="#markerShadow">Marker Shadow</a></td> <td></td> <td>Shadow to display under the marker.</td>
